@@ -29,7 +29,7 @@ A constrained gradient-descent algorithm (with non-linear constraints, using pro
 
 ## Mathematics research
 
-Information about my mathematics research can be found on my [University of Geneva department webpage.](http://www.unige.ch/~lanej/)
+[University of Geneva department webpage.](http://www.unige.ch/~lanej/)
 
 ## Contact me
 
