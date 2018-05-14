@@ -18,4 +18,4 @@ The notebook also highlights several common mistakes in other kernels:
 
 For the sake of example, the notebook evaluates a logistic regression model. The code is flexible so that you can replace logistic regression with any other scikit or scikit-wrapped model and run the same evaluation.
 
-![Area under the precision-recall curve](https://github.com/lane203j/lane203j.github.io/blob/master/images/auprc.png)
+![Area under the precision-recall curve]({{ "/images/auprc.png" | absolute_url }})
