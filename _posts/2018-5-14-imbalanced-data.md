@@ -11,7 +11,7 @@ The [credit card fraud detection](https://www.kaggle.com/mlg-ulb/creditcardfraud
 
 The notebook also highlights several common mistakes in other kernels:
 
-- Not using AUPRC
+- Not using AUPRC (metrics like accuracy are irrelevant and even ROC is not as useful)
 - Performing over/under sampling before cross-validation splits
 - Performing feature selection before cross-validation splits
 - Not using stratified k-fold splits
