@@ -16,6 +16,7 @@ The notebook also highlights several common mistakes in other kernels:
 - Not using AUPRC (metrics like accuracy are irrelevant and even ROC is not as useful)
 - Performing over/under sampling before cross-validation splits
 - Performing feature selection before cross-validation splits
+- Resampling the test sets
 - Not using stratified k-fold splits
 
 For the sake of example, the notebook evaluates a logistic regression model. The code is flexible so that you can replace logistic regression with any other scikit or scikit-wrapped model and run the same evaluation.
