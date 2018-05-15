@@ -9,6 +9,8 @@ The [credit card fraud detection](https://www.kaggle.com/mlg-ulb/creditcardfraud
 - 5-fold cross-validation 
 - random oversampling and other oversampling techniques like SMOTE
 
+![Is this a pigeon]({{ "/images/overfitting_meme.jpg" | absolute_url }})
+
 The notebook also highlights several common mistakes in other kernels:
 
 - Not using AUPRC (metrics like accuracy are irrelevant and even ROC is not as useful)
