@@ -3,7 +3,7 @@ layout: post
 title: Animated heatmap of crime rates in Chicago
 ---
 
-An animated heatmap created with matplotlib that shows crime rates by location in Chicago, from 2001 to 2004. 
+An animated heatmap created with matplotlib that shows crime rates by location in Chicago, from 2001 to 2017. 
 
 ![Crime in Chicago]({{ "/images/anim.gif" | absolute_url }})    
 
