@@ -13,8 +13,10 @@ goes back to my early undergraduate days as an electronics systems engineering s
   <h2>Deep autoencoders and restricted Boltzmann machines</h2></a>
 
 <p>In this project I am reproducing results from the paper "Reducing the Dimensionality 
-of Data with Neural Networks" by Hinton and Salakhutdinov. As an intermediate step, 
-this repository also contains implementation of a restricted Boltzmann machine. Here is an example of a MNIST 
+of Data with Neural Networks" by Hinton and Salakhutdinov. My code implements a restricted Boltzmann machine, 
+  pretrains a deep autoencoder using RBM's, then loads the weights into a Keras model for fine tuning.</p>
+
+<p>Here is an example of a MNIST 
   digit reproduced by the RBM after 10 epochs of training:</p>
 
 <img src="/images/RBM_reconstructed_10_epochs_k%3D1.png" alt="RBM reconstructed MNIST.">
