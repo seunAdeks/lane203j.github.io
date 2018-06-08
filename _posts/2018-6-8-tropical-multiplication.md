@@ -7,7 +7,7 @@ The semifield of tropical numbers (or the min-plus algebra) is the set of real n
 with the "addition" and "multiplication" operations
 
 \\[
-x\oplus y = \min\{x,y\},\, x\otimes y = x + y.
+x\oplus y = \min\\{x,y\\},\, x\otimes y = x + y.
 \\]
 In order to have an additive identity, we add negative infinity so that our set of numbers is \\( \mathbb{T} = \mathbb{R}\cup\{-\infty\} \\).
 
