@@ -15,9 +15,9 @@ Matrix multiplication over \\( \mathbb{T} \\) works the same way as ordinary mat
 \\[
 \[A\times B\]\_{i,j} = \oplus_{k} (a_{i,k}\otimes b_{k,j}) = \min_k \left\{ a_{i,k} + b_{k,j} \right\}.
 \\]
+Tropical matrix multiplication is interesting for many reasons, one being that the entries of the resulting matrix can be interpreted as [shortest paths in a weighted directed graph](https://en.wikipedia.org/wiki/Min-plus_matrix_multiplication). Tropical algebra also has applications in [scheduling problems](https://golem.ph.utexas.edu/category/2013/03/project_planning_parallel_proc.html).
 
-
-This isn't built into NumPy, but we can implement it in one line:
+Tropical matrix multiplication isn't built into NumPy, but we can implement it in one line:
 
 ```>>> np.min(X.reshape((n,1,p)) + Y.T.reshape((1,m,p)),axis=2)```
   
