@@ -13,7 +13,7 @@ So that we have an additive identity, we adjoin negative infinity to our set of 
 
 Matrix multiplication over \\( \mathbb{T} \\) works the same way as ordinary matrix multiplication (replacing the +,\* operations), 
 \\[
-\[A\times B\]\_{i,j} = \oplus_{k} (a_{i,k}\otimes b_{k,j}) = \min_k \left\\{ a_{i,k} + b_{k,j} \right\\}.
+\[A\cdotB\]\_{i,j} = \oplus_{k} (a_{i,k}\otimes b_{k,j}) = \min_k \left\\{ a_{i,k} + b_{k,j} \right\\}.
 \\]
 Tropical matrix multiplication is interesting for many reasons, one being that the entries of the resulting matrix can be interpreted as [shortest paths in a weighted directed graph](https://en.wikipedia.org/wiki/Min-plus_matrix_multiplication). Tropical algebra also has applications in [scheduling problems](https://golem.ph.utexas.edu/category/2013/03/project_planning_parallel_proc.html).  For more background, I recommend reading the first chapter of "Introduction to Tropical Geometry" by Maclagan and Sturmfels.
 
