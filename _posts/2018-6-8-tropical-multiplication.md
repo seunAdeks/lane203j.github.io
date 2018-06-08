@@ -9,7 +9,7 @@ with the "addition" and "multiplication" operations
 \\[
 x\oplus y = \min\\{x,y\\},\, x\otimes y = x + y.
 \\]
-In order to have an additive identity, we add negative infinity so that our set of numbers is \\( \mathbb{T} = \mathbb{R}\cup\{-\infty\} \\).
+So that we have an additive identity, we adjoin negative infinity to our set of numbers. Thus the set of tropical real numbers is \\( \mathbb{T} = \mathbb{R}\cup\\{-\infty\\} \\).
 
 Matrix multiplication over \\( \mathbb{T} \\) works the same way as ordinary matrix multiplication (replacing the +,\* operations), 
 \\[
