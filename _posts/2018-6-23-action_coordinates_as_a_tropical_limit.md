@@ -130,7 +130,8 @@ eq3 = ax[1].text(0.06,
 t = np.linspace(0,1.5,100)
 lower_bound = -t
 upper_bound = t
-ax[1].fill_between(t, lower_bound, upper_bound, facecolor='pink', alpha=0.5)
+ax[1].fill_between(t, lower_bound, upper_bound, 
+                   facecolor='pink', alpha=0.5)
 
 # draw the fiber of hw
 ax[1].plot([1, 1], [1, -1], 'k-', lw=1.5,color = 'b')
@@ -145,14 +146,15 @@ lines = [line1,line2]
 ax0tr = ax[0].transData # Axis 0 -> Display
 ax1tr = ax[1].transData # Axis 1 -> Display
 figtr = fig.transFigure.inverted() # Display -> Figure
-# 2. Transform arrow start point from axis 0 to figure coordinates
+# 2. Transform arrow start point from axis 0
 ptB = figtr.transform(ax0tr.transform((1.7, 0)))
-# 3. Transform arrow end point from axis 1 to figure coordinates
+# 3. Transform arrow end point from axis 1 
 ptE = figtr.transform(ax1tr.transform((-.6, 0)))
 # 4. Create the patch
 arrow = matplotlib.patches.FancyArrowPatch(
-    ptB, ptE, transform=fig.transFigure,  # Place arrow in figure coord system
-    fc = "b", connectionstyle="arc3,rad=0.", arrowstyle='simple', alpha = 0.5,
+    ptB, ptE, transform=fig.transFigure,  
+    fc = "b", connectionstyle="arc3,rad=0.", 
+    arrowstyle='simple', alpha = 0.5,
     mutation_scale = 20.
 )
 # 5. Add patch to list of objects to draw onto the figure
@@ -179,9 +181,11 @@ def animate(i):
     return tuple(lines)
 
 anim = animation.FuncAnimation(fig, animate, init_func=init, 
-                               frames=200, interval=20, blit=True,repeat=True)
+                               frames=200, interval=20, 
+                               blit=True,repeat=True)
 
-anim.save('image_of_orbit_animation.gif', dpi=80, writer='imagemagick')
+anim.save('image_of_orbit_animation.gif', 
+          dpi=80, writer='imagemagick')
 
 plt.show()
 ```
