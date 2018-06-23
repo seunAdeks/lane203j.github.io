@@ -35,3 +35,137 @@ It turns out this problem is quite difficult and is unsolved for all Poisson vec
 The main result of our paper is that there is a family of maps (called *Ginzburg-Weinstein* maps) coming from Poisson geometry such that in the limit as \\(t\to\infty\\), they converge to Gelfand-Zeitlin systems (on the family of Poisson vector spaces corresponding to type A). Since the family of maps is defined more generally (for all compact simple Lie algebras), we hope that we can eventually prove a more general version of this convergence result, and thus generalize Gelfand-Zeitlin systems.
 
 \* It should be mentioned that Megumi Harada did find a system that extends Gelfand-Zeitlin to type C.
+
+## Code
+
+For people more interested in the animation than the graph, here is the python code to create it yourself (you will need to install imagemagick).
+
+```
+import math
+import numpy as np
+import matplotlib
+import matplotlib.pyplot as plt
+import matplotlib.animation as animation
+from matplotlib import patches
+
+
+fig, ax = plt.subplots(1,2,figsize = (12,6))
+
+fig.suptitle("Action coordinates as a tropical limit of Ginzburg-Weinstein diffeomorphisms",fontsize=20)
+
+# ax[0]
+
+ax[0].axis('off')
+
+ax[0].set_xlim(-2,2)
+ax[0].set_ylim(-2,2)
+
+su2 = ax[0].text(0.05, 0.05, r'$\mathfrak{su}(2)^* $' , transform=ax[0].transAxes, fontsize=15)
+
+# outer orbit
+circle1 = plt.Circle((0, 0), 1.5, color='b', fill=False, linewidth=1.5)
+ax[0].add_artist(circle1)
+
+ellipse1 = patches.Ellipse((0, 0), 3, 0.4,
+                     angle=0, linewidth=1, fill=False, zorder=2, color = 'b',linestyle='--')
+ax[0].add_patch(ellipse1)
+
+# inner orbit
+circle2 = plt.Circle((0, 0), 1, color='r', fill=False, linewidth=1.5)
+ax[0].add_artist(circle2)
+
+ellipse2 = patches.Ellipse((0, 0), 2, 0.2,
+                     angle=0, linewidth=1, fill=False, zorder=2, color = 'r',linestyle='--')
+ax[0].add_patch(ellipse2)
+
+# ax[1]
+
+# labels, ticks, arrows
+ax[1].set_xlim(-0.5,1.5)
+ax[1].set_ylim(-2,2)
+
+ax[1].spines['top'].set_visible(False)
+ax[1].spines['right'].set_visible(False)
+
+ax[1].set_xlabel(r'$\zeta_1^2$',fontsize=15)
+ax[1].set_ylabel(r'$\zeta_1^1$',fontsize=15,rotation=0)
+
+ax[1].xaxis.set_label_coords(.95, -0.05)
+ax[1].yaxis.set_label_coords(-0.06, .95)
+
+plt.sca(ax[1])
+plt.xticks([1],[r'$r/2$'],fontsize=15)
+plt.yticks([-1,1],[r'$-r/2$',r'$r/2$'],fontsize=15)
+
+ax[1].arrow(1.4,-2,.1,0,fc='k', ec='k', lw = .15, 
+             head_width=.08, head_length=.12, overhang = .1, 
+             length_includes_head= True, clip_on = False)
+ax[1].arrow(-.5,1.9,0,.1,fc='k', ec='k', lw = .15, 
+             head_width=.08*.5, head_length=2*.12, overhang = .1, 
+             length_includes_head= True, clip_on = False)
+
+# equations
+time_text = ax[1].text(0.06, 0.95, 't = 1', transform=ax[1].transAxes, fontsize=15)
+eq1 = ax[1].text(0.06, 0.85, r'$\zeta_1^2\geq \zeta_1^1\geq -\zeta_1^2 $' , transform=ax[1].transAxes, fontsize=15)
+
+eq2 = ax[1].text(0.06, 0.15, r'$\zeta_1^1 = \frac{h}{2}$', transform=ax[1].transAxes, fontsize=15)
+eq3 = ax[1].text(0.06, 0.05, r'$\zeta_1^2 = \frac{1}{2t}\ln(2\cosh(tr)-2\cosh(th))$' , transform=ax[1].transAxes, fontsize=15)
+
+# draw the cone
+t = np.linspace(0,1.5,100)
+lower_bound = -t
+upper_bound = t
+ax[1].fill_between(t, lower_bound, upper_bound, facecolor='pink', alpha=0.5)
+
+# draw the fiber of hw
+ax[1].plot([1, 1], [1, -1], 'k-', lw=1.5,color = 'b')
+ax[1].plot([.75, .75], [.75, -.75], 'k-', lw=1.5,color = 'r')
+
+# the curve to be animated
+line1, = ax[1].plot([], [], lw=1.5,color = 'b')
+line2, = ax[1].plot([], [], lw=1.5,color = 'r')
+lines = [line1,line2]
+
+# add the arrow
+ax0tr = ax[0].transData # Axis 0 -> Display
+ax1tr = ax[1].transData # Axis 1 -> Display
+figtr = fig.transFigure.inverted() # Display -> Figure
+# 2. Transform arrow start point from axis 0 to figure coordinates
+ptB = figtr.transform(ax0tr.transform((1.7, 0)))
+# 3. Transform arrow end point from axis 1 to figure coordinates
+ptE = figtr.transform(ax1tr.transform((-.6, 0)))
+# 4. Create the patch
+arrow = matplotlib.patches.FancyArrowPatch(
+    ptB, ptE, transform=fig.transFigure,  # Place arrow in figure coord system
+    fc = "b", connectionstyle="arc3,rad=0.", arrowstyle='simple', alpha = 0.5,
+    mutation_scale = 20.
+)
+# 5. Add patch to list of objects to draw onto the figure
+fig.patches.append(arrow)
+
+def init():
+    y1 = np.linspace(-1, 1, 10000)
+    x1 = np.log(2*np.cosh(1*2) - 2*np.cosh(1*2*y1))/(2*1)
+    y2 = np.linspace(-.75, .75, 10000)
+    x2 = np.log(2*np.cosh(1*1.5) - 2*np.cosh(1*2*y2))/(2*1)
+    lines[0].set_data(x1, y1)
+    lines[1].set_data(x2, y2)
+    return tuple(lines)
+
+def animate(i):
+    s = 1+i/100
+    y1 = np.linspace(-1, 1, 100000)
+    x1 = np.log(2*np.cosh(s*2) - 2*np.cosh(s*2*y1))/(2*s)
+    y2 = np.linspace(-.75, .75, 50000)
+    x2 = np.log(2*np.cosh(s*1.5) - 2*np.cosh(s*2*y2))/(2*s)
+    lines[0].set_data(x1, y1)
+    lines[1].set_data(x2, y2)
+    time_text.set_text('t = %.1f' % s)
+    return tuple(lines)
+
+anim = animation.FuncAnimation(fig, animate, init_func=init, frames=200, interval=20, blit=True,repeat=True)
+
+anim.save('image_of_orbit_animation.gif', dpi=80, writer='imagemagick')
+
+plt.show()
+```
