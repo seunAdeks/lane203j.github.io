@@ -60,14 +60,16 @@ ax[0].axis('off')
 ax[0].set_xlim(-2,2)
 ax[0].set_ylim(-2,2)
 
-su2 = ax[0].text(0.05, 0.05, r'$\mathfrak{su}(2)^* $' , transform=ax[0].transAxes, fontsize=15)
+su2 = ax[0].text(0.05, 0.05, r'$\mathfrak{su}(2)^* $' ,  
+                 transform=ax[0].transAxes, fontsize=15)
 
 # outer orbit
 circle1 = plt.Circle((0, 0), 1.5, color='b', fill=False, linewidth=1.5)
 ax[0].add_artist(circle1)
 
 ellipse1 = patches.Ellipse((0, 0), 3, 0.4,
-                     angle=0, linewidth=1, fill=False, zorder=2, color = 'b',linestyle='--')
+                           angle=0, linewidth=1, fill=False, 
+                           zorder=2, color = 'b',linestyle='--')
 ax[0].add_patch(ellipse1)
 
 # inner orbit
@@ -75,7 +77,8 @@ circle2 = plt.Circle((0, 0), 1, color='r', fill=False, linewidth=1.5)
 ax[0].add_artist(circle2)
 
 ellipse2 = patches.Ellipse((0, 0), 2, 0.2,
-                     angle=0, linewidth=1, fill=False, zorder=2, color = 'r',linestyle='--')
+                           angle=0, linewidth=1, fill=False, 
+                           zorder=2, color = 'r',linestyle='--')
 ax[0].add_patch(ellipse2)
 
 # ax[1]
@@ -105,11 +108,23 @@ ax[1].arrow(-.5,1.9,0,.1,fc='k', ec='k', lw = .15,
              length_includes_head= True, clip_on = False)
 
 # equations
-time_text = ax[1].text(0.06, 0.95, 't = 1', transform=ax[1].transAxes, fontsize=15)
-eq1 = ax[1].text(0.06, 0.85, r'$\zeta_1^2\geq \zeta_1^1\geq -\zeta_1^2 $' , transform=ax[1].transAxes, fontsize=15)
+time_text = ax[1].text(0.06, 0.95, 't = 1', 
+                       transform=ax[1].transAxes, fontsize=15)
+eq1 = ax[1].text(0.06, 
+                 0.85, 
+                 r'$\zeta_1^2\geq \zeta_1^1\geq -\zeta_1^2 $' , 
+                 transform=ax[1].transAxes, 
+                 fontsize=15)
 
-eq2 = ax[1].text(0.06, 0.15, r'$\zeta_1^1 = \frac{h}{2}$', transform=ax[1].transAxes, fontsize=15)
-eq3 = ax[1].text(0.06, 0.05, r'$\zeta_1^2 = \frac{1}{2t}\ln(2\cosh(tr)-2\cosh(th))$' , transform=ax[1].transAxes, fontsize=15)
+eq2 = ax[1].text(0.06, 
+                 0.15, 
+                 r'$\zeta_1^1 = \frac{h}{2}$', 
+                 transform=ax[1].transAxes, 
+                 fontsize=15)
+eq3 = ax[1].text(0.06, 
+                 0.05, 
+                 r'$\zeta_1^2 = \frac{1}{2t}\ln(2\cosh(tr)-2\cosh(th))$' , 
+                 transform=ax[1].transAxes, fontsize=15)
 
 # draw the cone
 t = np.linspace(0,1.5,100)
@@ -126,7 +141,7 @@ line1, = ax[1].plot([], [], lw=1.5,color = 'b')
 line2, = ax[1].plot([], [], lw=1.5,color = 'r')
 lines = [line1,line2]
 
-# add the arrow
+# add the blue arrow from left to right 
 ax0tr = ax[0].transData # Axis 0 -> Display
 ax1tr = ax[1].transData # Axis 1 -> Display
 figtr = fig.transFigure.inverted() # Display -> Figure
@@ -163,7 +178,8 @@ def animate(i):
     time_text.set_text('t = %.1f' % s)
     return tuple(lines)
 
-anim = animation.FuncAnimation(fig, animate, init_func=init, frames=200, interval=20, blit=True,repeat=True)
+anim = animation.FuncAnimation(fig, animate, init_func=init, 
+                               frames=200, interval=20, blit=True,repeat=True)
 
 anim.save('image_of_orbit_animation.gif', dpi=80, writer='imagemagick')
 
