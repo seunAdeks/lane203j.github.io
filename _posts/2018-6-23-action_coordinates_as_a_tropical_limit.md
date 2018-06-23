@@ -30,7 +30,7 @@ Well, the Poisson structure on \\(\mathbb{R}^3\\) is the simplest example of a l
 
 **Problem:** Find coordinates analogous to cylindrical coordinates (i.e. action coordinates) on all Poisson vector spaces.
 
-It turns out this problem is quite difficult and is unsolved for all Poisson vector spaces except for a small family (those corresponding to compact Lie groups of type A,B, or D). On this family, a set of action coordinates called *Gelfand-Zeitlin systems* were discovered by [Guillemin and Sternberg in the early 1980's](https://www.sciencedirect.com/science/article/pii/0022123683900927).  Since then, no one has found a way to generalize Gelfand-Zeitlin systems to Poisson vector spaces corresponding to other Lie algebras\*.
+It turns out this problem is quite difficult and is unsolved for all Poisson vector spaces except a small family (those corresponding to compact Lie groups of type A,B, or D). On this family, a set of action coordinates called *Gelfand-Zeitlin systems* were discovered by [Guillemin and Sternberg in the early 1980's](https://www.sciencedirect.com/science/article/pii/0022123683900927).  Since then, no one has found a way to generalize Gelfand-Zeitlin systems to Poisson vector spaces corresponding to other Lie algebras\*.
 
 The main result of our paper is that there is a family of maps (called *Ginzburg-Weinstein* maps) coming from Poisson geometry such that in the limit as \\(t\to\infty\\), they converge to Gelfand-Zeitlin systems (on the family of Poisson vector spaces corresponding to type A). Since the family of maps is defined more generally (for all compact simple Lie algebras), we hope that we can eventually prove a more general version of this convergence result, and thus generalize Gelfand-Zeitlin systems.
 
