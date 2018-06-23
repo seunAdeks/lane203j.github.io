@@ -24,7 +24,9 @@ So cylindrical coordinates are perfectly tailored for describing the areas of co
 
 The **second** thing happening on the right is an animation of the images of the two spheres under a family of maps that depend on a parameter \\(t\\). We see from the picture that as \\(t\to \infty\\), the images of the two spheres under these maps are converging to the images of the two spheres under cylindrical coordinates. Near the equator, this convergence is very fast, but as you go towards the two poles, the convergence rate slows down exponentially (the image of every point except the poles does converge eventually).
 
-Ok, so we are convinced that cylindrical coordinates are nice, and we have recovered cylindrical coordinates as a limit of some family of maps, who cares? The Poisson structure on \\(\mathbb{R}^3\\) is the simplest example of a linear Poisson structure on a vector space (we call these *Poisson vector spaces*). Poisson vector spaces are simultaneously one of the simplest families of Poisson structures (they are linear), but they are also quite beautiful and complicated. There are linear Poisson structures corresponding to every Lie algebra, and their symplectic leaves are interesting topologically. Our motivation is the following problem:
+Ok, so we are convinced that cylindrical coordinates are nice, and we have recovered cylindrical coordinates as a limit of some family of maps. Why should we care about this? 
+
+Well, the Poisson structure on \\(\mathbb{R}^3\\) is the simplest example of a linear Poisson structure on a vector space (we call these *Poisson vector spaces*). Poisson vector spaces are simultaneously one of the simplest families of Poisson structures (they are linear), but they are also quite beautiful and complicated. There are linear Poisson structures corresponding to every Lie algebra, and their symplectic leaves are interesting topologically. Our motivation is the following problem:
 
 **Problem:** Find coordinates analogous to cylindrical coordinates (i.e. action coordinates) on all Poisson vector spaces.
 
