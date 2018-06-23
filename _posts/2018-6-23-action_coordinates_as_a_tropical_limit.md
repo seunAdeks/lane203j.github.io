@@ -38,7 +38,7 @@ The main result of our paper is that there is a family of maps (called *Ginzburg
 
 ## Code
 
-For people more interested in the animation than the graph, here is the python code to create it yourself (you will need to install imagemagick).
+For people more interested in the animation than the math, here is the python code to create it yourself (you will need to install imagemagick).
 
 ```
 import math
