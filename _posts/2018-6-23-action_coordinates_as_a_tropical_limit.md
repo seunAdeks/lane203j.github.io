@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Animation - Action coordinates as a limit of maps
+title: Action coordinates as a limit of maps
 ---
 
 Here is an animation I made to spice up seminar talks about my recent joint paper [on integrable systems](https://arxiv.org/abs/1804.01504).
 
-![gif]({{ "/images/image_of_orbit_animation.gif" | absolute_url }})
+![gif]({{ "/images/image_of_orbit_animation1.gif" | absolute_url }})
 
 So what's going on in this picture? On the left side we have a picture of two concentric spheres (red and blue) in \\(\mathbb{R}^3\\) (really, they are coadjoint orbits in the dual of the Lie algebra of \\(SU(2)\\), \\(\mathfrak{su}(2)^\*\\)).
 
