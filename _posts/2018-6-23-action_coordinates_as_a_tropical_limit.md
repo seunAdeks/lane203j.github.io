@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Animation - action coordinates as a tropical limit of Ginzburg-Weinstein diffeomorphisms
+title: Animation - Action coordinates as a limit of maps
 ---
 
 Here is an animation I made to spice up seminar talks about my recent joint paper [on integrable systems](https://arxiv.org/abs/1804.01504).
