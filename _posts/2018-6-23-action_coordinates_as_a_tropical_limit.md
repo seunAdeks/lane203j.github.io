@@ -26,7 +26,7 @@ The **second** thing happening on the right is an animation of the images of the
 
 Ok, so we are convinced that cylindrical coordinates are nice, and we have recovered cylindrical coordinates as a limit of some family of maps. Why should we care about this? 
 
-Well, the Poisson structure on \\(\mathbb{R}^3\\) is the simplest example of a linear Poisson structure on a vector space (we call these *Poisson vector spaces*). Poisson vector spaces are simultaneously one of the simplest families of Poisson structures (they are linear), but they are also quite beautiful and complicated. There are linear Poisson structures corresponding to every Lie algebra, and their symplectic leaves are interesting topologically. Our motivation is the following problem:
+Well, the Poisson structure on \\(\mathbb{R}^3\\) is the simplest example of a linear Poisson structure on a vector space (we call these *Poisson vector spaces*). Poisson vector spaces are simultaneously one of the simplest families of Poisson structures (they are linear), but they are also quite beautiful and complicated. Linear Poisson structures correspond to  Lie algebras, their symplectic leaves are interesting topologically, and their geometry is related to representation theory through Kirillov's orbit method. Our motivation is the following problem:
 
 **Problem:** Find coordinates analogous to cylindrical coordinates (i.e. action coordinates) on all Poisson vector spaces.
 
