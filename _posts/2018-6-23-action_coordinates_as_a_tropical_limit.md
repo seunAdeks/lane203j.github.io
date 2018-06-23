@@ -22,7 +22,7 @@ The **second** thing happening on the right is an animation of the images of the
 
 Ok, so we are convinced that cylindrical coordinates are nice, and we have recovered cylindrical coordinates as a limit of some family of maps, who cares? The Poisson structure on \\(\mathbb{R}^3\\) is the simplest example of a linear Poisson structure on a vector space (we call these *Poisson vector spaces*). Poisson vector spaces are simultaneously one of the simplest families of Poisson structures (they are linear), but they are also quite beautiful and complicated. There are linear Poisson structures corresponding to every Lie algebra, and their symplectic leaves are interesting topologically. Our motivation is the following problem:
 
-**Problem:** Find coordinates analogous to cylindrical coordinates on all Poisson vector spaces.
+**Problem:** Find coordinates analogous to cylindrical coordinates (i.e. action coordinates) on all Poisson vector spaces.
 
 It turns out this problem is quite difficult and is unsolved for all Poisson vector spaces except for a small family (those corresponding to compact Lie groups of type A,B, or D). On this family, a set of action coordinates called *Gelfand-Zeitlin systems* were discovered by [Guillemin and Sternberg in the early 1980's](https://www.sciencedirect.com/science/article/pii/0022123683900927).  Since then, no one has found a way to generalize Gelfand-Zeitlin systems to Poisson vector spaces corresponding to other Lie algebras\*.
 
