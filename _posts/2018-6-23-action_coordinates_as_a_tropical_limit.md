@@ -15,7 +15,7 @@ There are two things happening on the right side.  Let me explain the vertical l
 
 So why do we care about this?  From the perspective of Poisson geometry, concentric spheres in \\(\mathbb{R}^3\\) are "symplectic leaves" of a Poisson structure (I have only drawn two concentric spheres, but you should try to imagine that there is a sphere for every radius, like layers in an onion). To describe this structure more simply, each concentric sphere has a measure of area on it that scales linearly with radius and is rotationally invariant.  
 
-Cylindrical coordinates on \\(\mathbb{R}^3\\) are particularly nice because, as Archimedes observed, the area of a region on a sphere bounded by two latitudes only depends on the difference in heights between the two latitudes. This is illustrated in the following picture [from wolfram mathworld](http://mathworld.wolfram.com/ArchimedesHat-BoxTheorem.html).
+Cylindrical coordinates on \\(\mathbb{R}^3\\) are particularly nice because, as Archimedes observed, the area of a region on a sphere bounded by two latitudes only depends on the difference in heights between the two latitudes. This is illustrated in the following picture [from wolfram mathworld](http://mathworld.wolfram.com/ArchimedesHat-BoxTheorem.html), where the two surface areas \\(S_1\\) and \\(S_2\\) are equal.
 
 ![archimedes]({{ "/images/archimedes.gif" | absolute_url }})
 
