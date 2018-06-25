@@ -7,7 +7,7 @@ Here is an animation I made to spice up seminar talks about my recent joint pape
 
 ![gif]({{ "/images/image_of_orbit_animation1.gif" | absolute_url }})
 
-So what's going on in this picture? 
+What's going on in this picture? 
 
 On the left side we have a picture of two concentric spheres (red and blue) in \\(\mathbb{R}^3\\) (really, they are coadjoint orbits in the dual of the Lie algebra of \\(SU(2)\\), \\(\mathfrak{su}(2)^\*\\)).  
 
@@ -23,7 +23,7 @@ So cylindrical coordinates are perfectly tailored for describing the areas of co
 
 The **second** thing happening on the right is an animation of the images of the two spheres under a family of maps from \\(\mathbb{R}^3\\) to \\(\mathbb{R}^2\\) that depend on a parameter \\(t\\). The picture illustrates that as \\(t\to \infty\\), the images of the two spheres under these maps are converging to the images of the two spheres under cylindrical coordinates (i.e. these maps are converging to cylindrical coordinates). Near the equator, this convergence is very fast, but as you go towards the two poles, the convergence rate slows down exponentially (the image of every point except the poles does converge eventually).
 
-Ok, so we are convinced that cylindrical coordinates are nice, and we have recovered cylindrical coordinates as a limit of some family of maps. Why should we care about this? 
+Ok, we are convinced that cylindrical coordinates are nice, and we have recovered cylindrical coordinates as a limit of some family of maps. Why should we care about this? 
 
 Well, the Poisson structure on \\(\mathbb{R}^3\\) is one of the simplest examples of a linear Poisson structure on a vector space (we call these *Poisson vector spaces*). Poisson vector spaces are simultaneously one of the simplest families of Poisson structures (they are linear), but they are also quite beautiful and complicated. To say some fancy words: Poisson vector spaces correspond to  Lie algebras, their symplectic leaves are interesting topologically, and their geometry is related to representation theory through Kirillov's orbit method. Many classical mechanical systems, like [spinning tops](https://en.wikipedia.org/wiki/Lagrange,_Euler,_and_Kovalevskaya_tops), can also be described as dynamical systems in Poisson vector spaces. 
 
