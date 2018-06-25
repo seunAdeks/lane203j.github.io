@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Action coordinates as a limit of maps
+title: Cylindrical coordinates as a limit of maps
 ---
 
 Here is an animation I made to spice up seminar talks about my recent joint paper [on integrable systems](https://arxiv.org/abs/1804.01504). The code it was created with is at the end of the post.
@@ -35,7 +35,9 @@ The main result of our paper is that a certain family of maps \\({\rm gw}\_t\\) 
 
 **Theorem:** As \\(t\to\infty\\), the maps \\({\rm gw}\_t\\) converge to Gelfand-Zeitlin systems (on the family of Poisson vector spaces corresponding to type A). 
 
-The family of maps \\({\rm gw}\_t\\) is defined more generally (for all Poisson vector spaces corresponding to compact simple Lie algebras). We hope we can prove a more general version of this convergence result and thus generalize Gelfand-Zeitlin systems.
+These maps are pretty complicated in general, but for the special case of \\(\mathbb{R}^3\\), we can solve some equations and write down an explicit equation, which is how we get the gif above.
+
+The family of maps \\({\rm gw}\_t\\) is defined more generally (for all Poisson vector spaces corresponding to compact simple Lie algebras).  We hope we can prove a more general version of this convergence result and thus generalize Gelfand-Zeitlin systems.
 
 \* It should be mentioned that Megumi Harada did find a system that extends Gelfand-Zeitlin to type C. There are also methods of constructing action coordinates on coadjoint orbits, but this is not, strictly speaking, a solution of the problem stated above.
 
