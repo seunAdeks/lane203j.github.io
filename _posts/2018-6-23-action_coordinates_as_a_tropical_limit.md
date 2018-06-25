@@ -37,7 +37,7 @@ The main result of our paper is that a certain family of maps \\({\rm gw}\_t\\) 
 
 **Theorem:** As \\(t\to\infty\\), the maps \\({\rm gw}\_t\\) converge to Gelfand-Zeitlin systems (on the family of Poisson vector spaces corresponding to type A). 
 
-These maps are pretty complicated in general, but for the special case of \\(\mathbb{R}^3\\), we can solve some equations and write down an explicit equation, which is how we get the gif above.
+These maps are pretty complicated in general, but for the special case of \\(\mathbb{R}^3\\) we can solve some equations and write down an explicit equation, which is how we get the gif above.
 
 The family of maps \\({\rm gw}\_t\\) is defined more generally (for all Poisson vector spaces corresponding to compact simple Lie algebras).  We hope we can prove a more general version of this convergence result and thus generalize Gelfand-Zeitlin systems.
 
