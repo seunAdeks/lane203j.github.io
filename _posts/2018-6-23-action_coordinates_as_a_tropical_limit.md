@@ -19,11 +19,6 @@ Cylindrical coordinates on \\(\mathbb{R}^3\\) are particularly nice because, as 
 
 ![archimedes]({{ "/images/archimedes.gif" | absolute_url }})
 
-In differential geometry terms, in cylindircal coordinates, the area form on a sphere equals
-\\[
- dh\wedge d\theta.
-\\]
-
 So cylindrical coordinates are perfectly tailored for describing the areas of concentric spheres in \\(\mathbb{R}^3\\).  The way to say this in the language of Poisson geometry is that cylindrical coordinates are *action coordinates* for the Poisson structure (action coordinates are a particularly well-behaved type of *integrable system*). 
 
 The **second** thing happening on the right is an animation of the images of the two spheres under a family of maps that depend on a parameter \\(t\\). We see from the picture that as \\(t\to \infty\\), the images of the two spheres under these maps are converging to the images of the two spheres under cylindrical coordinates. Near the equator, this convergence is very fast, but as you go towards the two poles, the convergence rate slows down exponentially (the image of every point except the poles does converge eventually).
