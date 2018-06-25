@@ -19,25 +19,25 @@ Cylindrical coordinates on \\(\mathbb{R}^3\\) are particularly nice because, as 
 
 ![archimedes]({{ "/images/archimedes.gif" | absolute_url }})
 
-So cylindrical coordinates are perfectly tailored for describing the areas of concentric spheres in \\(\mathbb{R}^3\\).  The way to say this in the language of Poisson geometry is that cylindrical coordinates are *action coordinates* for the Poisson structure (action coordinates are a particularly well-behaved type of *integrable system*). 
+So cylindrical coordinates are perfectly tailored for describing the areas of concentric spheres in \\(\mathbb{R}^3\\).  The way to say this in the language of Poisson geometry is that \\(r\\) and \\(h\\) are *action coordinates* for the Poisson structure: level sets of the function \\(r\\) are symplectic leaves and the function \\(h\\) neatly describes the area form on each symplectic leaf.
 
-The **second** thing happening on the right is an animation of the images of the two spheres under a family of maps that depend on a parameter \\(t\\). We see from the picture that as \\(t\to \infty\\), the images of the two spheres under these maps are converging to the images of the two spheres under cylindrical coordinates. Near the equator, this convergence is very fast, but as you go towards the two poles, the convergence rate slows down exponentially (the image of every point except the poles does converge eventually).
+The **second** thing happening on the right is an animation of the images of the two spheres under a family of maps that depend on a parameter \\(t\\). The picture illustrates that as \\(t\to \infty\\), the images of the two spheres under these maps are converging to the images of the two spheres under cylindrical coordinates (i.e. these maps are converging to cylindrical coordinates). Near the equator, this convergence is very fast, but as you go towards the two poles, the convergence rate slows down exponentially (the image of every point except the poles does converge eventually).
 
 Ok, so we are convinced that cylindrical coordinates are nice, and we have recovered cylindrical coordinates as a limit of some family of maps. Why should we care about this? 
 
-Well, the Poisson structure on \\(\mathbb{R}^3\\) is the simplest example of a linear Poisson structure on a vector space (we call these *Poisson vector spaces*). Poisson vector spaces are simultaneously one of the simplest families of Poisson structures (they are linear), but they are also quite beautiful and complicated. Linear Poisson structures correspond to  Lie algebras, their symplectic leaves are interesting topologically, and their geometry is related to representation theory through Kirillov's orbit method. Our motivation is the following problem:
+Well, the Poisson structure on \\(\mathbb{R}^3\\) is the simplest example of a linear Poisson structure on a vector space (we call these *Poisson vector spaces*). Poisson vector spaces are simultaneously one of the simplest families of Poisson structures (they are linear), but they are also quite beautiful and complicated. To say some fancy words: Poisson vector spaces correspond to  Lie algebras, their symplectic leaves are interesting topologically, and their geometry is related to representation theory through Kirillov's orbit method. Our motivation is the following problem:
 
 **Problem:** Find coordinates analogous to cylindrical coordinates (i.e. action coordinates) on all Poisson vector spaces.
 
-It turns out this problem is quite difficult and is unsolved for all Poisson vector spaces except a small family (those corresponding to compact Lie groups of type A,B, or D). On this family, a set of action coordinates called *Gelfand-Zeitlin systems* were discovered by [Guillemin and Sternberg in the early 1980's](https://www.sciencedirect.com/science/article/pii/0022123683900927).  Since then, no one has found a way to generalize Gelfand-Zeitlin systems to Poisson vector spaces corresponding to other Lie algebras\*.
+It turns out this problem is quite difficult and is unsolved for all Poisson vector spaces except a small family (those corresponding to compact Lie groups of type A,B, or D). On this family, action coordinates called *Gelfand-Zeitlin systems* were discovered by [Guillemin and Sternberg in the early 1980's](https://www.sciencedirect.com/science/article/pii/0022123683900927).  The cylindrical coordinates discussed above are an example of a Gelfand-Zeitlin system. Since Guillemin and Sternberg's discovery, no one has found a way to generalize Gelfand-Zeitlin systems to arbitrary Poisson vector spaces\*.
 
-The main result of our paper is that a family of maps \\({\rm gw}\_t\\) coming from Poisson geometry (called *Ginzburg-Weinstein* maps) have the following property:
+The main result of our paper is that a certain family of maps \\({\rm gw}\_t\\) coming from Poisson geometry (called *Ginzburg-Weinstein* maps) have the following property:
 
 **Theorem:** As \\(t\to\infty\\), the maps \\({\rm gw}\_t\\) converge to Gelfand-Zeitlin systems (on the family of Poisson vector spaces corresponding to type A). 
 
-The family of maps \\({\rm gw}\_t\\) is defined more generally (for all compact simple Lie algebras). We hope we can prove a more general version of this convergence result and thus generalize Gelfand-Zeitlin systems.
+The family of maps \\({\rm gw}\_t\\) is defined more generally (for all Poisson vector spaces corresponding to compact simple Lie algebras). We hope we can prove a more general version of this convergence result and thus generalize Gelfand-Zeitlin systems.
 
-\* It should be mentioned that Megumi Harada did find a system that extends Gelfand-Zeitlin to type C. 
+\* It should be mentioned that Megumi Harada did find a system that extends Gelfand-Zeitlin to type C. There are also methods of constructing action coordinates on coadjoint orbits, but this is not, strictly speaking, a solution of the problem stated above.
 
 ## Code
 
